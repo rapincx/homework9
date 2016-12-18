@@ -1,0 +1,51 @@
+section#works
+    .row.expanded
+        .small-12.medium-12.columns.text-center
+            h1.sect-header-line our work
+            p.header-desc-line Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
+        .small-12.medium-12.columns
+            .grid
+                .grid-sizer.small-12.medium-2
+                    a(href="")
+                        img(src="img/portfolio/1.png")
+                .grid-item.small-12.large-4
+                    a(href="")
+                        img(src="img/portfolio/1.png")
+                .grid-item.small-12.large-4
+                    a(href="")
+                        img(src="img/portfolio/2.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/3.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/4.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/10.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/8.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/5.png")
+                .grid-item.small-12.large-4
+                    a(href="")
+                        img(src="img/portfolio/6.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/7.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/11.png")
+                .grid-item.small-12.large-2
+                    a(href="")
+                        img(src="img/portfolio/9.png")
+script.
+    $(document).ready(function(){
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        })
+    });
