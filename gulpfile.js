@@ -42,7 +42,7 @@ gulp.task('js', function () {
 
 gulp.task('css-libs', ['stylus'], function () {
     return gulp.src([
-        'app/libs/foundation-sites/dist/css/foundation-flex.min.css',
+        'app/libs/foundation-sites/dist/css/foundation-flex.css',
         'app/libs/Font-Awesome/css/font-awesome.min.css',
         'app/libs/FlexSlider/flexslider.css'
         ])

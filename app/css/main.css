@@ -8,6 +8,10 @@
 }
 body {
   background-color: #f6f6f6;
+  overflow-x: hidden;
+}
+.row {
+  max-width: 90rem;
 }
 .sect-header-line {
   position: relative;
@@ -46,9 +50,6 @@ body {
 @media screen and (min-width: 320px) {
   header {
     min-height: 160px;
-  }
-  nav#main-nav ul.menu li {
-    margin-right: 35px;
   }
   nav#main-nav ul.menu li a {
     color: #000;
@@ -98,14 +99,8 @@ body {
     margin: 0;
   }
   #header-main #flexslider1 ul.slides li {
-    position: relative;
-  }
-  #header-main #flexslider1 ul.slides li .flex-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    background: url("../img/slider-bg.png") no-repeat;
+    background-size: cover;
   }
   #header-main #flexslider1 ul.slides li .flex-content .slider-content-text {
     margin-top: 15px;
@@ -124,7 +119,6 @@ body {
     margin-bottom: 0;
   }
   #header-main #flexslider1 ul.slides li .flex-content .slider-content h2.slider-header:nth-child(2) {
-    margin-right: -200px;
     margin-bottom: 14px;
     margin-top: 8px;
   }
@@ -150,12 +144,35 @@ body {
     color: #000;
   }
   #header-main #flexslider1 ul.slides li .flex-content .slider-content .bottom-order {
+    padding: auto;
+    margin: 10px auto;
+  }
+}
+@media screen and (min-width: 480px) {
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content h2.slider-header {
+    font: bold 40px "Century Gothic";
+    padding: 11px;
+  }
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content .slider-order {
+    margin-bottom: 10px;
+  }
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content .bottom-order {
+    padding: 14px 0 0;
+  }
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content .bottom-order {
     padding: 23px 0 0 313px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 768px) {
+  nav#main-nav ul.menu li {
+    margin-right: 0;
+  }
   #header-main #flexslider1 ul.slides li .flex-content .slider-content h2.slider-header {
     font: bold 32px/28px "Century Gothic";
+  }
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content h2.slider-header:nth-child(2) {
+    margin-right: -200px;
   }
   #header-main #flexslider1 ul.slides li .flex-content .slider-content .slider-desc {
     font: bold 16px/14px "Century Gothic";
@@ -169,6 +186,12 @@ body {
   }
 }
 @media screen and (min-width: 1280px) {
+  nav#main-nav ul.menu li {
+    margin-right: 35px;
+  }
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content-text {
+    margin-top: 25px;
+  }
   #header-main #flexslider1 ul.slides li .flex-content .slider-content h2.slider-header {
     font: bold 70px "Century Gothic";
   }
@@ -181,6 +204,23 @@ body {
   }
   #header-main #flexslider1 ul.slides li .flex-content .slider-content .bottom-order {
     padding: 63px 0 0 333px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content-text {
+    margin-top: 35px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content h2.slider-header {
+    font: bold 89px "Century Gothic";
+  }
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content .slider-desc {
+    font: bold 34px "Century Gothic";
+  }
+  #header-main #flexslider1 ul.slides li .flex-content .slider-content .slider-order {
+    padding: 11px 29px;
+    font: bold 34px "Century Gothic";
   }
 }
 .sect-header {
@@ -241,7 +281,7 @@ body {
 #designs .design-item .overlay .design-img img {
   margin: 0;
   width: 100%;
-  max-height: 200px;
+  min-height: 200px;
 }
 #designs .design-item .overlay .design-block {
   position: relative;
@@ -289,6 +329,9 @@ body {
 #works .grid .large-4 {
   width: 33.33333%;
 }
+#works .grid .grid-item {
+  margin-bottom: 2px;
+}
 #works .grid .grid-item a {
   display: block;
   min-width: 100%;
@@ -297,6 +340,17 @@ body {
 #works .grid .grid-item a img {
   width: 100%;
   max-width: 150%;
+}
+@media screen and (min-width: 320px) {
+  #works .grid .large-2 {
+    width: 100%;
+  }
+  #works .grid .large-4 {
+    width: 100%;
+  }
+  #works .grid .grid-item {
+    margin-top: 5px;
+  }
 }
 #clients {
   overflow-x: hidden;
@@ -479,6 +533,7 @@ body {
 #footer-copy .copy {
   color: #fff;
   font: bold 14px "Century Gothic";
+  padding: 10px 0;
   margin-bottom: 0;
 }
 #footer-copy nav#main-nav ul.menu li a {
@@ -494,4 +549,13 @@ body {
 }
 #footer-copy nav#main-nav ul.menu li:hover a {
   color: #000;
+}
+@media screen and (min-width: 320px) {
+  #footer-copy {
+    height: auto;
+    max-height: 140px;
+  }
+  #footer-copy nav#main-nav ul.menu li a {
+    padding: 0.7rem 1rem;
+  }
 }
