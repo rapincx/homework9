@@ -1,0 +1,30 @@
+header#header-top.row.align-middle
+    .small-12.medium-4.columns.small-text-center.medium-text-left
+        h1
+            a(href="./")
+                img(src="img/logo.png" alt="logotype")
+    .small-12.medium-8.columns
+        .title-bar(data-responsive-toggle='main-nav', data-hide-for='large')
+            button.menu-icon(type='button', data-toggle='')
+            .title-bar-title MENU
+        nav#main-nav
+            ul.menu.vertical.medium-vertical.large-horizontal.expanded.medium-text-center.align-right(data-responsive-menu="drilldown medium-dropdown")
+                li.active
+                    a(href="#") HOME
+                li
+                    a(href="#") PORTFOLIO
+                li
+                    a(href="#") BLOG
+                li
+                    a(href="#") about us
+                li
+                    a(href="#") CONTACT
+
+script.
+    $(window).load(function () {
+        $('#flexslider1').flexslider({
+            animation: "slide",
+            prevText: "",
+            nextText: ""
+        });
+    });

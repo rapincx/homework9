@@ -1,0 +1,65 @@
+section#clients
+    .row.expanded
+        .small-12.medium-12.columns.small-text-center
+            h1.sect-header-line our clients
+            p.header-desc-line Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
+        .small-12.medium-12.columns
+            #flexslider2.flexslider
+                ul.slides
+                    li
+                        img(src="img/clients/1.png")
+                    li
+                        img(src="img/clients/2.png")
+                    li
+                        img(src="img/clients/3.png")
+                    li
+                        img(src="img/clients/4.png")
+                    li
+                        img(src="img/clients/5.png")
+                    li
+                        img(src="img/clients/6.png")
+                    li
+                        img(src="img/clients/7.png")
+                    li
+                        img(src="img/clients/8.png")
+                    li
+                        img(src="img/clients/1.png")
+                    li
+                        img(src="img/clients/2.png")
+                    li
+                        img(src="img/clients/3.png")
+                    li
+                        img(src="img/clients/4.png")
+
+script.
+    $(document).ready(function () {
+        (function () {
+            var $window = $(window),
+                    flexslider = {vars: {}};
+
+            function getGridSize() {
+                return (window.innerWidth < 600) ? 2 :
+                        (window.innerWidth < 900) ? 3 : 4;
+            }
+
+            $window.ready(function () {
+                $('#flexslider2').flexslider({
+                    animation: "slide",
+                    animationLoop: false,
+                    itemWidth: 140,
+                    itemMargin: 40,
+                    controlNav: false,
+                    minItems: 2,
+                    maxItems: 8,
+                    move: 1
+                });
+            });
+
+            $window.resize(function () {
+                var gridSize = getGridSize();
+
+                flexslider.vars.minItems = gridSize;
+                flexslider.vars.maxItems = gridSize;
+            });
+        }());
+    });

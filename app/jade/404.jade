@@ -1,0 +1,10 @@
+html(lang="ru")
+    include includes/head
+    body
+        include includes/header
+        include mixins/page
+        +pager("404 error")
+        include includes/404
+        include includes/footer
+        script.
+            $(document).foundation();
