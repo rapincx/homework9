@@ -2,10 +2,9 @@ html(lang="ru")
     include includes/head
     body
         include includes/header
-        include includes/slider
-        include includes/designs
-        include includes/works
-        include includes/clients
+        include mixins/page
+        +pager("404 error")
+        include includes/404
         include includes/footer
         script.
             $(document).foundation();
